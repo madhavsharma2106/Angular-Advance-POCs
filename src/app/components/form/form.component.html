@@ -1,0 +1,21 @@
+<div class="form">
+  <form [formGroup]='demoForm' (ngSubmit)="submitForm()">
+    <div class="form-content " [hidden]="firstTab">
+      <p>First Tab</p>
+      <input type="text" placeholder="first tab" formControlName="firstTab">
+      <button type="button" (click)="toggleTabs(2)">Next</button>
+    </div>
+    <div class="form-content" [hidden]="secondTab">
+      <p>Second Tab</p>
+      <input type="text" placeholder="second tab" formControlName="secondTab">
+      <button type="button" (click)="toggleTabs(1)">Previous</button>
+      <button type="button" (click)="toggleTabs(3)">Next</button>
+    </div>
+    <div class="form-content" [hidden]="thirdTab">
+      <p>Third Tab</p>
+      <input type="text" placeholder="third tab" formControlName="thirdTab">
+      <button type="button" (click)="toggleTabs(2)">Previous</button>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

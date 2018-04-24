@@ -1,0 +1,13 @@
+<div class="form">
+  <input type="text" #searchHotelInput (keyup)="userSearchQuery(searchHotelInput.value)" (focus)="userSearchQueryFocused()" />
+  <div class="data-list" *ngIf="hotelDropdownList.length" >
+    <span *ngFor="let hotel of hotelDropdownList">
+      <input (change)="itemChecked(hotel)" type="checkbox" id="{{hotel.id}}" [checked]='isChecked(hotel)'/> {{hotel.name}} [{{hotel.id}}]
+    </span>
+  </div>
+</div>
+
+<div class="selected-hotels">
+   <span *ngFor="let name of selectedHotels" > {{name}} </span>
+</div>
+

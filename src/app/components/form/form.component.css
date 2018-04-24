@@ -1,0 +1,9 @@
+.form{
+    border:2px solid red;
+}
+
+.form-content{
+    background: #2771126b;
+    padding: 30px;
+    margin: 10px;
+}

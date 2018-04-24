@@ -1,0 +1,31 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" placeholder="name">
+  <select formControlName="dropdown" >
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  <div class="dom-emlement" formArrayName="fArray" *ngFor="let formElement of userForm.controls.fArray.controls; let i = index">
+    <div [formGroupName]="i" >
+      <input type="text" placeholder="input one" formControlName="inputOne">
+      <input type="text" placeholder="input two" formControlName="inputTwo">
+      <button (click)='addDomForm()' type="button">Add Dom Element</button>
+    </div>
+  </div>
+  <div class="search-country">
+    <input #query type="text" (keyup)="query.value" placeholder="Slecect Country"> 
+  </div>
+  
+  <div class="drop-down">
+    <ul *ngFor='let country of countries | search:query.value'>
+      <li (click)= 'selected(country)'> {{country}} </li> 
+    </ul>
+  </div>
+  <div class="selected">
+    <h4>Selected Countries</h4>
+    <ul *ngFor='let selected of selectedCountries' >
+      <li>{{selected}}</li>
+    </ul>
+  </div>
+  <button type="submit"> Submit Form</button>
+</form>

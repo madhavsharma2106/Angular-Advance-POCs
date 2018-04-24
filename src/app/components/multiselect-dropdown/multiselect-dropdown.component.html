@@ -1,0 +1,26 @@
+<button type="button" (click)="showToaster()"  > Show Toaster </button>
+<div class="search-country">
+  <input #query type="text" (keyup)="query.value" placeholder="Slecect Country"> 
+</div>
+
+<div class="drop-down">
+  <ul *ngFor='let country of countries | search:query.value'>
+    <li (click)= 'selected(country)'> {{country}} </li> 
+  </ul>
+</div>
+<div class="selected">
+  <h4>Selected Countries</h4>
+  <ul *ngFor='let selected of selectedCountries'>
+    <li>{{selected}}</li>
+  </ul>
+</div>
+
+<div>
+  <select>
+    <option value=123>dfghjk</option>
+    <option value=123>dfghjk</option>
+    <option value=123>dfghjk</option>
+    <option value=123>dfghjk</option>
+  </select>
+</div>
+

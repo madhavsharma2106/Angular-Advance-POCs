@@ -1,0 +1,6 @@
+form{
+    margin: 20px;
+}
+button[type="submit"]{
+    margin: 10px 0;
+}

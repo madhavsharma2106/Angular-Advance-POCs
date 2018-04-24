@@ -1,0 +1,31 @@
+.toaster-message{
+    width: 500px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    padding: 20px;
+}
+
+.info{
+    background: #03A9F4;    
+}
+
+.error{
+    background: red;
+}
+
+.success{
+    background: green;
+}
+
+.toaster-message p{
+    color: white;
+}
+
+.toaster-message span{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
